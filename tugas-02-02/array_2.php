@@ -34,7 +34,7 @@
  echo $Programmer_Python[3]. "<br />";
  echo $Programmer_Python[2]. "<br />";
  echo "<br />";
- /*print_r(array_diff($$Programmer_Python, )); echo "<br />";*/
+ /*print_r(array_diff($Programmer_Python,$programmer_php )); echo "<br />";*/
 
  echo "Daftar mahasiswa yang masuk kelompok Programmer PHP dan ProgrammerPython "; echo "<br />";
  echo $programmer_php[0]. "<br />";
