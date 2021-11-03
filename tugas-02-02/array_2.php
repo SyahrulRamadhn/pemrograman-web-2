@@ -25,16 +25,16 @@
  echo "Daftar mahasiswa yang masuk kelompok Programmer PHP "; echo "<br />";
  echo $programmer_php[5]. "<br />";
  echo $programmer_php[1]. "<br />";
- echo $programmer_php[6]. "<br />";
  echo $programmer_php[3]. "<br />";
  echo $programmer_php[2]. "<br />";
  echo "<br />";
+ /*print_r(array_diff($programmer_php, $Programmer_Python)); echo "<br />";*/
 
  echo "Daftar mahasiswa yang masuk kelompok Programmer Python "; echo "<br />";
- echo $Programmer_Python[1]. "<br />";
  echo $Programmer_Python[3]. "<br />";
  echo $Programmer_Python[2]. "<br />";
  echo "<br />";
+ /*print_r(array_diff($$Programmer_Python, )); echo "<br />";*/
 
  echo "Daftar mahasiswa yang masuk kelompok Programmer PHP dan ProgrammerPython "; echo "<br />";
  echo $programmer_php[0]. "<br />";
