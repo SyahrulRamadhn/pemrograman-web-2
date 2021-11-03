@@ -44,12 +44,9 @@
  echo $programmer_php[4]. "<br />";
  echo $programmer_php[5]. "<br />";
  echo $programmer_php[6]. "<br />";
- echo $Programmer_Python[0]. "<br />";
- echo $Programmer_Python[1]. "<br />";
  echo $Programmer_Python[2]. "<br />";
  echo $Programmer_Python[3]. "<br />";
- echo $Programmer_Python[4]. "<br />";
-echo "<br />";
+ echo "<br />";
 
  echo "Daftar seluruh mahasiswa yang masuk kelompok Programmer PHP atau
  Programmer Python (penggabungan metode merge) ";
