@@ -12,42 +12,41 @@
                     <h2> Operator Aritmetika </h2>
                     <p>20192205140 - Syahrul Ramadhan </p>
                     <p>
-                        <?php
-                            
-                        $hari = array (
-                                1 =>    'Senin',
-                                        'Selasa',
-                                        'Rabu',
-                                        'Kamis',
-                                        'Jumat',
-                                        'Sabtu',
-                                        'Minggu'
-                    );
-                    echo $hari[ date('N') ].", "; 
-            
-                    function tanggal_indonesia($tanggal){
-                         $bulan = array (
-                                 1 =>   	'Januari',
-                                            'Februari',
-                                            'Maret',
-                                            'April',
-                                            'Mei',
-                                            'Juni',
-                                            'Juli',
-                                            'Agustus',
-                                            'September',
-                                            'Oktober',
-                                            'Nopember',
-                                            'Desember'
-                    );
-            
-                    $var = explode('-', $tanggal);
-            
-                    return $var[2] . ' ' . $bulan[ (int)$var[1] ] . ' ' . $var[0];
-                     }
-            
-                    echo tanggal_indonesia(date('Y-m-d'));
-                    echo date(" G:i:s"); 
+                    <?php
+                        $hari=date('l');
+                        $bulan=date('m');
+                        $tanggal=date('d');
+                        $tahun=date('Y');
+
+                        switch ($hari) 
+                        {
+                            case"Sunday":$hari="Minggu";break;
+                            case"Monday":$hari="Senin";break;
+                            case"Tuesday":$hari="Selasa";break;
+                            case"Wednesday":$hari="Rabu";break;
+                            case"Thursday":$hari="Kamis";break;
+                            case"Friday":$hari="Jumat";break;
+                            case"Saturday":$hari="Sabtu";break;
+                        }
+
+                        switch($bulan)
+                        {
+                            case"1":$bulan="Januari";break;
+                            case"2":$bulan="Februari";break;
+                            case"3":$bulan="Maret";break;
+                            case"4":$bulan="April";break;
+                            case"5":$bulan="Mei";break;
+                            case"6":$bulan="Juni";break;
+                            case"7":$bulan="Juli";break;
+                            case"8":$bulan="Agustus";break;
+                            case"9":$bulan="September";break;
+                            case"10":$bulan="Oktober"; break;
+                            case"11":$bulan="Nopember";break;
+                            case"12":$bulan="Desember";break;
+                            }
+                        
+
+                        echo "<br/>$hari, $tanggal-$bulan-$tahun ";echo date(" G:i:s");  
                         ?>
                     </p>
                 </div>
