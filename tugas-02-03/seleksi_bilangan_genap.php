@@ -7,7 +7,6 @@ $data=array();
 $i = rand(1, 1000);
 //print_r($i);
 
-
 array_push($data, $i);
 print_r($data);
 
