@@ -12,7 +12,7 @@ print_r($data);
 
 if($i % 2 == 0){
     
-    echo "</br>.$i Adalah bilangan genap";
+    echo "</br> ".$i." Adalah bilangan genap";
 }
 else
 {

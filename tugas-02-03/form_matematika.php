@@ -16,7 +16,7 @@
                         $hari=date('l');
                         $bulan=date('m');
                         $tanggal=date('d');
-                        $tahun=date('Y');
+                        $tahun=date('Y'); 
 
                         switch ($hari) 
                         {
@@ -73,7 +73,7 @@
            <table class="table table-striped table-danger text-center">
             <?php
                 $angka1 = isset($_POST["angka1"]) ? $_POST["angka1"] : "";               
-                $angka2 = isset($_POST["angka2"]) ? $_POST["angka2"] : "";  
+                 $angka2 = isset($_POST["angka2"]) ? $_POST["angka2"] : "";  
 
                 
                     if($angka1 == "")
