@@ -9,13 +9,11 @@
 <body>
 <?php
 session_start();
-if(!isset($_SESSION["username"]))
-       {
-       }
-       else
-       {
-        header("location: login.php");
-        }
+if($_SESSION['nama_lengkap']=='')
+{
+    header("location:login.php");
+}
+?>
 ?>
 
 Selamat Datang Users <?php echo $_SESSION['username']?>
