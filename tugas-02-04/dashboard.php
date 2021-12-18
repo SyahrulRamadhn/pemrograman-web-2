@@ -8,10 +8,11 @@
        session_start();
        if(!isset($_SESSION["nama"]))
        {
+        header("location: login.php");
        }
        else
        {
-        header("location: login.php");
+        
         }
 ?>
           <center><h2>20192205140 Syahrul Ramadhan</h2></center>

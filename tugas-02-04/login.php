@@ -41,13 +41,15 @@
          $password = "20192205140";
 
          //memulai session
-         session_start();
+         
 
          //mengambil inputan dari form login
          $nama = isset($_POST["nama"]) ? $_POST["nama"] : "";
          $pass = isset($_POST["pass"]) ? $_POST["pass"] : "";
 
         if($nama == $username && $pass == $password){
+            session_start();
+            $_SESSION["nama"]=$username;
             header("location: dashboard.php");
             
             }
