@@ -53,7 +53,7 @@
             header("location: dashboard.php");
             
             }
-          ?> 
+          ?>
       </div>
     </body>
 </html>
