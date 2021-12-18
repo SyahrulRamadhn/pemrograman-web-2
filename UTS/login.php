@@ -20,6 +20,10 @@
         //mengambil inputan dari form login
         $nama = isset($_POST["nama"]) ? $_POST["nama"] : "";
         $pass = isset($_POST["pass"]) ? $_POST["pass"] : "";
+        $login = isset($_POST["login"]) ? $_POST["login"] : "";
+
+        if($login)
+        {
         if(!empty($nama))
         {
             $sql = "SELECT * FROM user WHERE username='".$nama."' AND password='".$pass."'";
@@ -41,7 +45,8 @@
         else
         {
             echo"Username atau Password tidak boleh kosong";
-        } ?>
+        }
+     } ?>
 
 </body>
 </html>

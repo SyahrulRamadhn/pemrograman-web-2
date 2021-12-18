@@ -15,7 +15,6 @@
 			<th>Penerbit</th>
 			<th>Tahun Rilis</th>
 			<th>Kategori</th>		
-            <th>Ket</th>
 		</tr>
 		<?php 
         //include file koneksi
@@ -35,10 +34,6 @@
                 <td><?php echo $info['penerbit']; ?></td>
                 <td><?php echo $info['tahun_rilis']; ?></td>
                 <td><?php echo $info['kategori']; ?></td>
-                <td>
-                    <a href="#?id=<?php echo $info['id']; ?>">Edit</a> |
-                    <a href="#?id=<?php echo $info['id']; ?>">Hapus</a>					
-                </td>
             </tr>
             <?php } 
             }

@@ -8,16 +8,54 @@
 </head>
 <body>
 <?php
-session_start();
-if($_SESSION['nama_lengkap']=='')
-{
-    header("location:login.php");
-}
+    session_start();
+    if(!isset($_SESSION["username"]))
+    {
+    header("location: login.php");
+    }
 ?>
-?>
+<span><a href="logout.php">logout</a></span>
+    <h2>DAFTAR GAME POPULER DI INDONESIA 2021</h2>
+    <table >
+		<tr>
+			<th>No</th>
+			<th>NamaGame</th>
+			<th>Penerbit</th>
+			<th>Tahun Rilis</th>
+			<th>Kategori</th>		
+            <th>Ket</th>
+		</tr>
+		<?php 
+        //include file koneksi
+		include "koneksi.php";
 
-Selamat Datang Users <?php echo $_SESSION['username']?>
-          <center><h2>20192205140 Syahrul Ramadhan</h2></center>
-          <center><a href="logout.php">logout</a></center>
+        //sql select
+		$sql ="SELECT nama_game,kategori,penerbit, tahun_rilis FROM DATA";
+		$nomor = 1;
+        
+        $kueri = $koneksi->query($sql);
+        if($kueri){
+            while($info = $kueri->fetch_array()){
+            ?>
+            <tr>
+                <td><?php echo $nomor++; ?></td>
+                <td><?php echo $info['nama_game']; ?></td>
+                <td><?php echo $info['penerbit']; ?></td>
+                <td><?php echo $info['tahun_rilis']; ?></td>
+                <td><?php echo $info['kategori']; ?></td>
+                <td>
+                    <a href="#?id=<?php echo $info['id']; ?>">Edit</a> |
+                    <a href="#?id=<?php echo $info['id']; ?>">Hapus</a>					
+                </td>
+            </tr>
+            <?php } 
+            }
+            else{
+                echo "Gagal Menampilkan Data : ".$koneksi->error;
+            }
+            ?>
+        
+	</table>
+
 </body>
 </html>
