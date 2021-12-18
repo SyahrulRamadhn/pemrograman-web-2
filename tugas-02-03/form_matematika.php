@@ -73,9 +73,11 @@
            <table class="table table-striped table-danger text-center">
             <?php
                 $angka1 = isset($_POST["angka1"]) ? $_POST["angka1"] : "";               
-                 $angka2 = isset($_POST["angka2"]) ? $_POST["angka2"] : "";  
-
+                $angka2 = isset($_POST["angka2"]) ? $_POST["angka2"] : "";  
+                $hitung = isset($_POST["hitung"]) ? $_POST["hitung"] : ""; 
                 
+                if($hitung)
+                {
                     if($angka1 == "")
                     {
                         echo "
@@ -102,6 +104,7 @@
                     {
                         echo "";
                     }
+                }
             ?>
             </table>
             <p><h2>Hasil Operasi Aritmatika</h2></p>
